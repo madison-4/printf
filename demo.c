@@ -31,21 +31,32 @@ int _printf(const char *format, ...)
 				case 's':
 				{
 					char *str = va_arg(args, char *);
-					printf(str);
-					str++;
+					while (*str)
+					{
+						putchar(*str);
+						str++;
+						count++;
+					}
+					break;
+				}
+				case 'd':
+				{
+					int num = va_arg(args, int);
+					printf("%d", num);
 					count++;
 					break;
 				}
 				case '%':
 				{
-					putchar('%');
-					count++;
+					count += edge_cases(format, args);
+					break;
 				}
 				default:
 				{
 					putchar('%');
 					putchar(*format);
 					count += 2;
+					break;
 				}
 			}
 		}
