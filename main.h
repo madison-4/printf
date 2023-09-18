@@ -11,8 +11,8 @@ int _putchar(char c);
 int edge_cases(const char *format, va_list args);
 
 /**
- * struct choose - strcu to hold function pointers and character choice
- * @f: function pointer
+ * struct choose - a struct to hold function pointers and character choice
+ * @f: the function pointer
  * @c: character to choose with
  */
 typedef struct choose
