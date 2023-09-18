@@ -8,4 +8,15 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int edge_cases(const char *format, va_list args);
 
+/**
+ * choose - strcu to hold function pointers and character choice
+ * @f: function pointer
+ * @c: character to choose with
+ */
+typedef struct choose{
+	char c;
+	int (*f)(va_list);
+} choose;
+int _puts(va_list str);
+int choice(va_list ar, char c);
 #endif  /* MAIN_H */
