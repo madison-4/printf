@@ -8,6 +8,7 @@
 int choice(va_list ar, char c)
 {
 	choose great[] = {
+		{'c', myputchar},
 		{'s', _puts},
 	};
 	unsigned long int iter = 0;
