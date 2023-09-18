@@ -15,7 +15,7 @@ int choice(va_list ar, char c)
 	int count = 0;
 	int (*func)(va_list a);
 
-	for (iter = 0; iter < ((sizeof(great)) / sizeof(great[0]); iter++)
+	for (iter = 0; iter < 2; iter++)
 	{
 		if (c == great[iter].c)
 		{
