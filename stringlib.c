@@ -23,8 +23,7 @@ int _puts(va_list ar)
 int myputchar(va_list arg)
 {
 	char c = (va_arg(arg, int));
-	int count;
 
-	count = _putchar(c);
-	return (count);
+	_putchar(c);
+	return (1);
 }
