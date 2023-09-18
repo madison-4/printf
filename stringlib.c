@@ -12,7 +12,10 @@ int _puts(va_list ar)
 	if (!(str))
 		str = "(null)";
 	for (i = 0; str[i]; i++)
-		count += _putchar(str[i]);
+	{
+		_putchar(str[i]);
+		count++;
+	}
 	return (count);
 }
 /**
@@ -23,7 +26,9 @@ int _puts(va_list ar)
 int myputchar(va_list arg)
 {
 	char c = (va_arg(arg, int));
+	int i = 0;
 
 	_putchar(c);
-	return (1);
+	i++;
+	return (i);
 }
