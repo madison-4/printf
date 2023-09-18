@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * choice - function to choose the function pointer
- * @car: format specifier
+ * choice - function that will choose the function pointer
+ * @car: the format specifier
  * @ar: va_list variable
  * Return: Result of the choice
  */
