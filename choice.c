@@ -19,7 +19,8 @@ int choice(va_list ar, char c)
 		if (c == great[iter].c)
 		{
 			func = great[iter].f;
-			count = func(ar);
+			count += func(ar);
+			return (count);
 		}
 		iter++;
 	}
