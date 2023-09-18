@@ -15,3 +15,14 @@ int _puts(va_list ar)
 		count += _putchar(str[i]);
 	return (count);
 }
+/**
+ * myputchar - to print cars
+ * @arg: va_list variable argument
+ * Return: number of chars(1)
+ */
+int myputchar(va_list arg)
+{
+	char c = (va_arg(arg, char c));
+
+	return (_putchar(c));
+}
