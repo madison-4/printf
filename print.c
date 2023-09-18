@@ -18,14 +18,14 @@ int _printf(const char *format, ...)
 			count += _putchar(format[i]);
 		else
 		{
-			i++;
+			++i;
 			if (!format[i])
 				return (-1);
 			count += choice(args, format[i]);
 			i++;
 			continue;
 		}
-		i++;
+		++i;
 	}
 	va_end(args);
 	return (count);
