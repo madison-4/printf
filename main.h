@@ -16,5 +16,6 @@ typedef struct choose{
 	int (*f)(va_list);
 } choose;
 int _puts(va_list str);
+int choice(va_list ar, char c);
 
 #endif  /* MAIN_H */

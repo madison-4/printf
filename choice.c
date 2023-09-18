@@ -4,19 +4,23 @@
  * @c: format specifier
  * Return: Result of the choice
  */
-int (*choice(char c))(va_list a)
+int choice(va_list ar, char c)
 {
 	choose great[] = {
 		{'s', _puts},
-		{NULL, NULL}
 	};
-	int iter = 0;
+	long unsigned int iter = 0;
+	int count = 0;
+	int (*func)(va_list a);
 
-	while (great[iter].f)
+	for (iter = 0; iter < ((sizeof(great)) / sizeof(great[0])); iter++)
 	{
 		if (c == great[iter].c)
-			return (great[iter].f);
+		{
+			func = great[iter].f;
+			count = func(ar);
+		}
 		iter++;
 	}
-	return (NULL);
+	return (count);
 }
