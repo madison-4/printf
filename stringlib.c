@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _puts - print a string
- * @str: string to be printed
+ * @ar: va_list variable to be printed
  * Return: number of characters in the strings
  */
 int _puts(va_list ar)

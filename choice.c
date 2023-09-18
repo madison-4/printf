@@ -2,6 +2,7 @@
 /**
  * choice - function to choose the function pointer
  * @c: format specifier
+ * @ar: va_list variable
  * Return: Result of the choice
  */
 int choice(va_list ar, char c)
@@ -9,7 +10,7 @@ int choice(va_list ar, char c)
 	choose great[] = {
 		{'s', _puts},
 	};
-	long unsigned int iter = 0;
+	unsigned long int iter = 0;
 	int count = 0;
 	int (*func)(va_list a);
 

@@ -1,0 +1,21 @@
+#include "main.h"
+/**
+ * main -check the code and prove to partner
+ * Return: 0 on success
+ */
+int main(void)
+{
+	int len1, len2;
+	char str[] = "See we can count";
+
+	len1 = _printf("Let's print a simple sentence");
+	len2 = printf("Let's print a simple sentence");
+	printf("\nYpur returns %d while the stad returns %d\n", len1, len2);
+	len1 = _printf("Let's conjoin a string %s and see", str);
+	len2 = printf("Let's conjoin a string %s and see", str);
+	printf("\nYours returns %d while the std retsuns %d\n", len1, len2);
+/*	len1 = _printf("Let's end with a %");
+	len2 = printf("Let's end with a %");
+*/	printf("\nYours returns %d while the std retsuns %d\n", len1, len2);
+	return (0);
+}
