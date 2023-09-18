@@ -28,6 +28,12 @@ int myputchar(va_list arg)
 	char c = (va_arg(arg, int));
 	int i = 0;
 
+	if (!(c))
+	{
+		_putchar('-');
+		i++;
+		return (i);
+	}
 	_putchar(c);
 	i++;
 	return (i);
