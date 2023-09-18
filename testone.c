@@ -11,18 +11,18 @@ int main(void)
 	int len, len2;
 	char *str __attribute__((unused)), c __attribute__((unused));
 
-	len = printf("Let's print a simple sentence");
+/*	len = printf("Let's print a simple sentence");
 	len2 = _printf("Let's print a simple sentence");
 	printf("\nThe std printf returns %d while yours returns %d see the difference", len, len2);
 	c = 'u';
 	len = printf("Now let's add a char %c variable", c);
 	len2 = _printf("Now let's add a char %c variable", c);
 	printf("\nThe std printf returns %d while yours returns %d see the difference",len, len2);
-/*	c = '\0';
+*/	c = '\0';
 	len = printf("Now let's see what happens if the char %c is NULL", c);
 	len2 = _printf("Now let's see what happens if the char %c is NULL", c);
 	printf("\nThe std printf returns %d while yours returns %d see the difference",len, len2);
-	c = '%';
+/*	c = '%';
 	len = printf("The char %c is now a percent", c);
 	len2 = _printf("The char %c is now a percent", c);
 	printf("\nThe std printf returns %d while yours returns %d see the difference",len, len2);
