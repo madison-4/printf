@@ -3,6 +3,7 @@
 
 #include<stdarg.h>
 #include<stdlib.h>
+#include<stdio.h>
 
 int _printf(const char *format, ...);
 int _putchar(char c);
@@ -19,4 +20,5 @@ typedef struct choose{
 } choose;
 int _puts(va_list str);
 int choice(va_list ar, char c);
+
 #endif  /* MAIN_H */
