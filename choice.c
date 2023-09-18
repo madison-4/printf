@@ -25,5 +25,5 @@ int choice(va_list ar, char c)
 		}
 		iter++;
 	}
-	return (count);
+	return (-7);
 }

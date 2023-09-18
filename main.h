@@ -22,5 +22,6 @@ typedef struct choose{
 int _puts(va_list str);
 int choice(va_list ar, char c);
 int myputchar(va_list ar);
+int perce(void);
 
 #endif  /* MAIN_H */

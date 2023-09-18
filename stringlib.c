@@ -35,3 +35,12 @@ int myputchar(va_list arg)
 	_putchar(c);
 	return (1);
 }
+/**
+ * perce - print a percent
+ * void arguments\
+ * Return: 1 on success
+ */
+int perce(void)
+{
+	return (_putchar('%'));
+}

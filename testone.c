@@ -18,18 +18,19 @@ int main(void)
 	len = printf("Now let's add a char %c variable", c);
 	len2 = _printf("Now let's add a char %c variable", c);
 	printf("\nThe std printf returns %d while yours returns %d see the difference",len, len2);
-*/	c = '\0';
+	c = '\0';
 	len = printf("Now let's see what happens if the char %c is NULL", c);
 	len2 = _printf("Now let's see what happens if the char %c is NULL", c);
 	printf("\nThe std printf returns %d while yours returns %d see the difference",len, len2);
-/*	c = '%';
+	c = '%';
 	len = printf("The char %c is now a percent", c);
 	len2 = _printf("The char %c is now a percent", c);
 	printf("\nThe std printf returns %d while yours returns %d see the difference",len, len2);
 	len = printf("What happens when it's a percent %% follow");
 	len2 = _printf("What happens when it's a percent %% follow");
 	printf("\nThe std printf returns %d while yours returns %d see the difference",len ,len2);
-	str = "A simple string";
+*/	
+/*	str = "A simple string";
 	len = _printf("Let's conjoin a string %s and see", str);
 	len2 = printf("let's conjoin a string %s and see", str);
 	printf("\nThe std printf returns %d while yours returns %d see the difference",len2,len);
