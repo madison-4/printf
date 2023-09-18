@@ -27,13 +27,7 @@ int myputchar(va_list arg)
 {
 	char c = (va_arg(arg, int));
 
-	if (!(c))
-	{
-		_putchar('-');
-		return (1);
-	}
-	_putchar(c);
-	return (1);
+	return(_putchar(c));
 }
 /**
  * perce - print a percent
