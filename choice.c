@@ -5,25 +5,21 @@
  * @ar: va_list variable
  * Return: Result of the choice
  */
-int choice(va_list ar, char c)
+int choice(va_list ar, char car)
 {
-	choose great[] = {
-		{'c', myputchar},
-		{'s', _puts},
-	};
-	unsigned long int iter = 0;
+	choose great[] = {{'c', myputchar},{'s', _puts}};
+	int iter = 0;
 	int count = 0;
 	int (*func)(va_list a);
 
 	for (iter = 0; iter < 2; iter++)
 	{
-		if (c == great[iter].c)
+		if (car == great[iter].c)
 		{
 			func = great[iter].f;
 			count += func(ar);
 			return (count);
 		}
-		iter++;
 	}
 	return (-7);
 }
