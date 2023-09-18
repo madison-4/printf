@@ -22,7 +22,7 @@ int _puts(va_list ar)
  */
 int myputchar(va_list arg)
 {
-	char c = (va_arg(arg, char c));
+	char c = (va_arg(arg, int));
 
 	return (_putchar(c));
 }
