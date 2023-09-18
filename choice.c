@@ -1,13 +1,13 @@
 #include "main.h"
 /**
  * choice - function to choose the function pointer
- * @c: format specifier
+ * @car: format specifier
  * @ar: va_list variable
  * Return: Result of the choice
  */
 int choice(va_list ar, char car)
 {
-	choose great[] = {{'c', myputchar},{'s', _puts}};
+	choose great[] = {{'c', myputchar}, {'s', _puts}};
 	int iter = 0;
 	int count = 0;
 	int (*func)(va_list a);
