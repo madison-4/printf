@@ -26,15 +26,12 @@ int _puts(va_list ar)
 int myputchar(va_list arg)
 {
 	char c = (va_arg(arg, int));
-	int i = 0;
 
 	if (!(c))
 	{
 		_putchar('-');
-		i++;
-		return (i);
+		return (1);
 	}
 	_putchar(c);
-	i++;
-	return (i);
+	return (1);
 }
