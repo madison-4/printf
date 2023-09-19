@@ -14,7 +14,7 @@ int choice(va_list ar, char car)
 	int count = 0;
 	int (*func)(va_list a);
 
-	for (iter = 0; iter < 4; iter++)
+	for (iter = 0; iter < 5; iter++)
 	{
 		if (car == great[iter].c)
 		{
