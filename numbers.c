@@ -34,3 +34,30 @@ int numprint(int arg)
 	count += _putchar(((unsigned int) arg % 10) + 48);
 	return (count);
 }
+/**
+ * dectobin - prints adecimal nunber in binary
+ * @num: number to print
+ * Return: Number of characters printed
+ */
+int dectobin(int num)
+{
+	int count = 0;
+
+	num /= 2;
+	if (num)
+		count += dectobin(num);
+	count += _putchar((num % 2) + 48);
+	return (count);
+}
+/**
+ * printbin - print a number in binary
+ * @arg: va_list variable passed
+ * Return: count of binary digits
+ */
+int printbin(va_list arg)
+{
+	int num = va_arg(arg, int), count = 0;
+
+	count += dectobin(num);
+	return (count);
+}

@@ -8,7 +8,8 @@
 int choice(va_list ar, char car)
 {
 	choose great[] = {{'c', myputchar}, {'s', _puts},
-			{'d', print_number}, {'i', print_number}};
+			  {'d', print_number}, {'i', print_number},
+			  {'b', printbin}};
 	int iter = 0;
 	int count = 0;
 	int (*func)(va_list a);
