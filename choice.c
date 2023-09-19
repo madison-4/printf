@@ -9,7 +9,7 @@ int choice(va_list ar, char car)
 {
 	choose great[] = {{'c', myputchar}, {'s', _puts},
 			  {'d', print_number}, {'i', print_number},
-			  {'b', printbin}, {'R', rotthirt}};
+			  {'b', printbin}, {'R', rotthirt}, {'X',printhex}};
 	int iter = 0;
 	int count = 0;
 	int (*func)(va_list a);

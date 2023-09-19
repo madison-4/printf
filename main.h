@@ -12,7 +12,7 @@ int _putchar(char c);
 int edge_cases(const char *format, va_list args);
 
 /**
- * struct choose - a struct to hold function pointers and character choice
+ * struict choose - a struct to hold function pointers and character choice
  * @f: the function pointer
  * @c: character to choose with
  */
@@ -31,5 +31,7 @@ int printbin(va_list ar);
 int dectobin(unsigned int num);
 char *rot13(char *s);
 int rotthirt(va_list ar);
+int printhex(va_list arg);
+int dec_hex(unsigned int h_num);
 
 #endif  /* MAIN_H */
