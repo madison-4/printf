@@ -41,12 +41,21 @@ int numprint(int arg)
  */
 int dectobin(int num)
 {
-	int count = 0;
+	int count = 0, remainder, quotient;
 
-	num /= 2;
-	if (num)
-		count += dectobin(num);
-	count += _putchar((num % 2) + 48);
+	if (num < 0)
+	{
+		_putchar(1 + 48);
+		count++;
+		num = -num;
+	}
+	if (!(num))
+		return (_putchar(48));
+	quotient = num / 2;
+	remainder = num % 2;
+	if (quotient)
+		count += dectobin(quotient);
+	count += _putchar((remainder) + 48);
 	return (count);
 }
 /**
