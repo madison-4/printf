@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * print_number - prints an integer
- * @n: number to be printed
+ * print_number - a function that prints an integer
+ * @n: the number to be printed
  * Return: no return
  */
 int print_number(va_list n)
@@ -12,8 +12,8 @@ int print_number(va_list n)
 	return (count);
 }
 /**
- * numprint - print a number using recursion
- * @arg: number to be printed
+ * numprint - a function that prints a number using recursion
+ * @arg: the number to be printed
  * Return: number of digits printed
  */
 int numprint(int arg)
