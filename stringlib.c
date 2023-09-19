@@ -30,27 +30,6 @@ int myputchar(va_list arg)
 	return (_putchar(c));
 }
 /**
- * perce - a function to print a rot13 string
- * void arguments\
- * @var: va_list variable passed
- * Return: 1 on success
- */
-int rotthirt(va_list var)
-{
-	char *str = va_arg(var, char *);
-	char *rotate = rot13(str);
-	int i, count = 0;
-
-	if (!(rotate))
-		rotate = "(null)";
-	for (i = 0; rotate[i]; i++)
-	{
-		_putchar(rotate[i]);
-		count++;
-	}
-	return (count);
-}
-/**
  * rot13 - encode a string by moving its chars by 13 chars.
  * @s: string to be encoded
  * Return: encided string
@@ -74,4 +53,25 @@ char *rot13(char *s)
 		i++;
 	}
 	return (s);
+}
+/**
+ * rotthirt - a function to print a rot13 string
+ * void arguments\
+ * @var: va_list variable passed
+ * Return: 1 on success
+ */
+int rotthirt(va_list var)
+{
+	char *str = va_arg(var, char *);
+	char *rotate = rot13(str);
+	int i, count = 0;
+
+	if (!(rotate))
+		rotate = "(null)";
+	for (i = 0; rotate[i]; i++)
+	{
+		_putchar(rotate[i]);
+		count++;
+	}
+	return (count);
 }

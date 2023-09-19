@@ -29,5 +29,7 @@ int print_number(va_list arg);
 int numprint(int arg);
 int printbin(va_list ar);
 int dectobin(unsigned int num);
+char *rot13(char *s);
+int rotthirt(va_list ar);
 
 #endif  /* MAIN_H */
