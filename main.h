@@ -28,6 +28,6 @@ int perce(void);
 int print_number(va_list arg);
 int numprint(int arg);
 int printbin(va_list ar);
-int dectobin(int num);
+int dectobin(unsigned int num);
 
 #endif  /* MAIN_H */

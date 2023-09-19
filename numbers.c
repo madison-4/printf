@@ -39,16 +39,11 @@ int numprint(int arg)
  * @num: number to print
  * Return: Number of characters printed
  */
-int dectobin(int num)
+int dectobin(unsigned int num)
 {
-	int count = 0, remainder, quotient;
+	unsigned int remainder, quotient;
+	int count = 0;
 
-	if (num < 0)
-	{
-		_putchar(1 + 48);
-		count++;
-		num = -num;
-	}
 	if (!(num))
 		return (_putchar(48));
 	quotient = num / 2;
@@ -65,7 +60,7 @@ int dectobin(int num)
  */
 int printbin(va_list arg)
 {
-	int num = va_arg(arg, int), count = 0;
+	int num = va_arg(arg, unsigned int), count = 0;
 
 	count += dectobin(num);
 	return (count);
