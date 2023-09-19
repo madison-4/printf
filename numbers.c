@@ -7,16 +7,30 @@
 int print_number(va_list n)
 {
 	int num = va_arg(n, int), count = 0;
-	unsigned int k = num;
 
-	if (k < 0)
+	count += numprint(num);
+	return (count);
+}
+/**
+ * numprint - print a number using recursion
+ * @arg: number to be printed
+ * Return: number of digits printed
+ */
+int numprint(int arg)
+{
+	unsigned int k = arg;
+	int count = 0;
+
+	if (arg < 0)
 	{
 		_putchar('-');
-		n *= -1;
-		k = n;
+		count++;
+		arg *= -1;
+		k = arg;
 	}
 	k /= 10;
 	if (k)
-		print_number(k);
-	_putchar(((unsigned int) n % 10) + 48);
+		count += numprint(k);
+	count += _putchar(((unsigned int) arg % 10) + 48);
+	return (count);
 }

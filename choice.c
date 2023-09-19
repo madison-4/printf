@@ -7,12 +7,13 @@
  */
 int choice(va_list ar, char car)
 {
-	choose great[] = {{'c', myputchar}, {'s', _puts}};
+	choose great[] = {{'c', myputchar}, {'s', _puts}
+			  {'d', printnumber}, {'i', printnumber}};
 	int iter = 0;
 	int count = 0;
 	int (*func)(va_list a);
 
-	for (iter = 0; iter < 2; iter++)
+	for (iter = 0; iter < 4; iter++)
 	{
 		if (car == great[iter].c)
 		{

@@ -25,5 +25,6 @@ int choice(va_list ar, char c);
 int myputchar(va_list ar);
 int perce(void);
 int print_num(va_list arg);
+int numprint(int arg);
 
 #endif  /* MAIN_H */
