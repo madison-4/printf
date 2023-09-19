@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _puts - print a string
+ * _puts - a function that prints a string
  * @ar: va_list variable to be printed
  * Return: number of characters in the strings
  */
@@ -19,7 +19,7 @@ int _puts(va_list ar)
 	return (count);
 }
 /**
- * myputchar - to print cars
+ * myputchar - a function to print chars
  * @arg: va_list variable argument
  * Return: number of chars(1)
  */
@@ -30,7 +30,7 @@ int myputchar(va_list arg)
 	return (_putchar(c));
 }
 /**
- * perce - print a percent
+ * perce - a function to print a percent
  * void arguments\
  * Return: 1 on success
  */
