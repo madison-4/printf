@@ -39,20 +39,23 @@ char *rot13(char *s)
 	int i = 0, arriter;
 	char alph[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char *str = malloc(_strlen(s) + 1);
 
+	if (!str)
+		return (NULL);
 	while (s[i])
 	{
 		for (arriter = 0; arriter < 52; arriter++)
 		{
 			if (s[i] == alph[arriter])
 			{
-				s[i] = rot[arriter];
+				str[i] = rot[arriter];
 				break;
 			}
 		}
 		i++;
 	}
-	return (s);
+	return (str);
 }
 /**
  * rotthirt - a function to print a rot13 string
@@ -73,5 +76,6 @@ int rotthirt(va_list var)
 		_putchar(rotate[i]);
 		count++;
 	}
+	free (rotate);
 	return (count);
 }
