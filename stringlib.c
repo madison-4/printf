@@ -66,6 +66,8 @@ int rotthirt(va_list var)
 	char *rotate = rot13(str);
 	int i, count = 0;
 
+	if (!(rotate))
+		rotate = "(null)";
 	for (i = 0; rotate[i]; i++)
 	{
 		_putchar(rotate[i]);
