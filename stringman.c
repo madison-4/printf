@@ -43,6 +43,5 @@ int print_rev(char *s)
 		count++;
 		len--;
 	}
-	_putchar('\n');
 	return (count);
 }
