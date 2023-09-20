@@ -76,6 +76,6 @@ int rotthirt(va_list var)
 		_putchar(rotate[i]);
 		count++;
 	}
-	free (rotate);
+	free(rotate);
 	return (count);
 }
