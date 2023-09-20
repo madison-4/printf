@@ -24,14 +24,14 @@ typedef struct choose
 int _puts(va_list str);
 int choice(va_list ar, char c);
 int myputchar(va_list ar);
-int perce(void);
+int _strlen(char *s);
+int print_rev(char *str);
 int print_number(va_list arg);
 int numprint(int arg);
 int printbin(va_list ar);
 int dectobin(unsigned int num);
 char *rot13(char *s);
 int rotthirt(va_list ar);
-int printhex(va_list arg);
-int dec_hex(unsigned int h_num);
+int revprint(va_list ar);
 
 #endif  /* MAIN_H */

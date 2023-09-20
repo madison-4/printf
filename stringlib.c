@@ -30,31 +30,6 @@ int myputchar(va_list arg)
 	return (_putchar(c));
 }
 /**
- * rot13 - encode a string by moving its chars by 13 chars.
- * @s: string to be encoded
- * Return: encided string
- */
-char *rot13(char *s)
-{
-	int i = 0, arriter;
-	char alph[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-
-	while (s[i])
-	{
-		for (arriter = 0; arriter < 52; arriter++)
-		{
-			if (s[i] == alph[arriter])
-			{
-				s[i] = rot[arriter];
-				break;
-			}
-		}
-		i++;
-	}
-	return (s);
-}
-/**
  * rotthirt - a function to print a rot13 string
  * void arguments\
  * @var: va_list variable passed
@@ -63,15 +38,28 @@ char *rot13(char *s)
 int rotthirt(va_list var)
 {
 	char *str = va_arg(var, char *);
-	char *rotate = rot13(str);
-	int i, count = 0;
+	char alph[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i, count = 0, j;
 
-	if (!(rotate))
-		rotate = "(null)";
-	for (i = 0; rotate[i]; i++)
+	if (!(str))
+		str = "AHYY";
+	for (i = 0; str[i]; i++)
 	{
-		_putchar(rotate[i]);
-		count++;
+		for (j = 0; alph[j]; j++)
+		{
+			if (str[i] == alph[j])
+			{
+				_putchar(rot[j]);
+				count++;
+				break;
+			}
+		}
+		if (!(alph[j]))
+		{
+			_putchar(str[i]);
+			count++;
+		}
 	}
 	return (count);
 }
