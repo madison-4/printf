@@ -33,5 +33,6 @@ int dectobin(unsigned int num);
 char *rot13(char *s);
 int rotthirt(va_list ar);
 int revprint(va_list ar);
+int *dec2bin(int n);
 
 #endif  /* MAIN_H */
