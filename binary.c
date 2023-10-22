@@ -6,14 +6,14 @@
  */
 int *dec2bin(int n)
 {
-	int *decarr;
-	long unsigned  int i;
+	int *decarr, x = 1;
+	size_t i, len = (sizeof(int) * 8) - 1;
 
-	decarr = malloc((sizeof(int) * 8));
+	decarr = malloc((sizeof(int) * 8) * sizeof(int));
 	if (decarr == NULL)
 		return (NULL);
-	for (i = 0; i < (sizeof(int) * 8); i++)
-		decarr[i] = (n << 1);
+	for (i = 0; i < (sizeof(int) * 8); i++, len--)
+		decarr[i] = (n & (x << i));
 	return (decarr);
 }
 /**
