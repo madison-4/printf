@@ -13,7 +13,7 @@ int *dec2bin(int n)
 	if (decarr == NULL)
 		return (NULL);
 	for (i = 0; i < (sizeof(int) * 8); i++, len--)
-		decarr[i] = (n & (x << i));
+		decarr[i] = ((n >> i) & x);
 	return (decarr);
 }
 /**
