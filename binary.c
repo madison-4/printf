@@ -24,23 +24,3 @@ int *dec2bin(int n)
 	}
 	return (decarr);
 }
-/**
- * main - test dectobin
- * no arguments
- * Return: 0 on success
- */
-int main(void)
-{
-
-	int x = 1, *arr;
-	size_t i;
-	
-	arr = dec2bin(x);
-	if (arr == NULL)
-		exit(EXIT_FAILURE);
-	for (i = 0; i < (sizeof(int) * 8); i++)
-		printf("%d", arr[i]);
-	putchar(10);
-	free(arr);
-	return (0);
-}

@@ -34,5 +34,6 @@ char *rot13(char *s);
 int rotthirt(va_list ar);
 int revprint(va_list ar);
 int *dec2bin(int n);
+int print_hex(int num);
 
 #endif  /* MAIN_H */
