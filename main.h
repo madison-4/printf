@@ -35,5 +35,8 @@ int rotthirt(va_list ar);
 int revprint(va_list ar);
 int *dec2bin(int n);
 int print_hex(int num);
+int bintodec(int decarray);
+int _pow(int base, int power);
+int unprint(va_list ar);
 
 #endif  /* MAIN_H */
